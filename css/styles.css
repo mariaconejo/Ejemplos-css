@@ -77,9 +77,21 @@ p {
   color: green !important; }
 
 /* REGLA 3 Mayor especificidad: */
-/* Especificidad de 3, mayor prioridad */
-/* Especificidad de 2 */
-/* Especificidad de 1 */
+
+  /* Especificidad de 3, mayor prioridad */
+
+  .product-detail .product-properties .product-property {}
+
+
+  /* Especificidad de 2 */
+
+.product-properties .product-property {}
+
+
+  /* Especificidad de 1 */
+
+.product-property {}
+
 /*REGLA 4 Última línea*/
 p {
   color: red; }
@@ -107,12 +119,12 @@ p {
 p {
   animation-duration: 2s;
   animation-name: slidein;
-  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
   overflow: hidden;
   animation-direction: alternate; }
 
-p {
-  animation: 3s 2 alternate slidein; }
+/*p {
+  animation: 3s 2 alternate slidein; }*/
 
 @keyframes slidein {
   from {
