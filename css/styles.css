@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* Css orientado a objetos*/
+.caja {
+  background: #272f2f;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 20px; }
+
+.azul {
+  background: #4a88f4; }
+
+.naranja {
+  background: #e67e22; }
+
+.verde {
+  background: #27ae60; }
+
+/*Slider*/
+.slideshow {
+  list-style-type: none; }
+
+.slideshow :after {
+  top: -16px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  z-index: 0; }
+
+.slideshow li span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 30s linear infinite 0s; }
+
+.slideshow li:nth-child(1) span {
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg"); }
+
+.slideshow li:nth-child(2) span {
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9ecd82b40364fc97f4b_bridge.jpg");
+  animation-delay: 6s; }
+
+.slideshow li:nth-child(3) span {
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+  animation-delay: 12s; }
+
+.slideshow li:nth-child(4) span {
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg");
+  animation-delay: 18s; }
+
+.slideshow li:nth-child(5) span {
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+  animation-delay: 24s; }
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in; }
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0; }
+  8% {
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  19% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+.no-cssanimations .cb-slideshow li span {
+  opacity: 1; }
+
+/*ANIMACIONES*/
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  overflow: hidden;
+  animation-direction: alternate; }
+
+p {
+  animation: 3s 2 alternate slidein; }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  /*75%{
+        font-size: 300%;
+    }*/
+  to {
+    margin-left: 0%;
+    width: 100%;
+    transform: rotate(360deg); } }
+
+/TRANSICIONES/
+nav {
+  padding-top: 200px;
+  text-align: center; }
+
+nav a {
+  font-size: 30px; }
+
+a {
+  color: white;
+  background-color: #a11717;
+  /* Aplicar a 1 propiedad */
+  /* nombre de la propiedad | duración */
+  /*
+    transition: margin-left 4s;
+
+  /* nombre de la propiedad | duración | retardo */
+  /*
+    transition: margin-left 4s 1s;
+
+  /* nombre de la propiedad | duración | función | retardo */
+  /*
+    transition: margin-left 4s ease-in-out 1s;
+
+  /* Aplicar a 2 propiedades */
+  /*
+    transition: margin-left 4s, color 1s;
+    /* Aplicar a todas las propiedades que cambien */
+  transition: all 1s ease-out; }
+
+a:hover,
+a:focus {
+  margin-left: 400px;
+  color: cornflowerblue;
+  background-color: #fff; }
+
+/*GRID*/
+.wrapper > div {
+  border: 2px solid #e9ab58;
+  border-radius: 5px;
+  background-color: rgba(233, 171, 88, 0.5);
+  padding: 1em;
+  color: #d9480f; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto); }
+
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1; }
+
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3; }
+
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5; }
+
+.four {
+  grid-column: 3;
+  grid-row: 3; }
+
+.five {
+  grid-column: 2;
+  grid-row: 4; }
+
+.six {
+  grid-column: 3;
+  grid-row: 4; }
+
+/*FLEXBOX*/
+.div {
+  display: block; }
+
+.contenedores {
+  display: flex; }
+
+.elemento:nth-child(1) {
+  background-color: #122838; }
+
+.elemento:nth-child(2) {
+  background-color: #183449; }
+
+.elemento:nth-child(3) {
+  background-color: #204662; }
+
+.elemento:nth-child(4) {
+  background-color: #2a5b7f; }
+
+.elemento:nth-child(5) {
+  background-color: #34719e; }
+
+.elemento:nth-child(6) {
+  background-color: #3e86bb; }
+
+.elemento:nth-child(7) {
+  background-color: #4698d4; }
+
+.elemento {
+  width: 25%;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0px; }
+
+/* Ejemplo con variables */
+:root {
+  --main-bg-color: brown; }
+
+.uno {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block; }
+
+.dos {
+  color: white;
+  background-color: black;
+  margin: 10px;
+  width: 150px;
+  height: 70px;
+  display: inline-block; }
+
+.tres {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 75px; }
+
+/*SASS*/
+a {
+  color: #122033; }
+
+a:hover {
+  color: #96A8C0; }
+
+/* Reducir codigo repetitivo mixing */
+p {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-weight: 100; }
+
+.titulo {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-weight: bold; }
+
+/*Asegurar la compatibilidad entre navegadores*/
+.container {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+/* Entradas de formulario que se ajustan automáticamente al ancho de su contenedor*/
+/* Otro caso de uso para calc() es asegurar que los campos de un formulario llenan el espacio disponible*/
+/* sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.*/
+input {
+  padding: 2px;
+  display: block;
+  width: 98%;
+  /*salvaguarda para navegadores que no reconocen calc()*/
+  width: calc(100% - 1em); }
+
+#formbox {
+  width: 130px;
+  /* salvaguarda para navegadores que no reconocen calc() */
+  width: calc(100% / 6);
+  border: 1px solid black;
+  padding: 4px; }
+
+span.textThreePlus {
+  font-size: calc(1em + 3px);
+  font-size: -moz-calc(1em + 3px);
+  font-size: -webkit-calc(1em + 3px); }
+
+#footer {
+  height: calc((10% - 4px) /  2 + 3px); }
+
+.contenedor {
+  width: calc(300px / 950px * 100%); }
+
+.div {
+  width: 31.57895%; }
+
+.div {
+  font-size: 0.75rem; }

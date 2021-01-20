@@ -1,0 +1,52 @@
+/* Entradas de formulario que se ajustan automáticamente al ancho de su contenedor*/
+/* Otro caso de uso para calc() es asegurar que los campos de un formulario llenan el espacio disponible*/
+/* sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.*/
+
+input {
+    padding: 2px;
+    display: block;
+    width: 98%;               /*salvaguarda para navegadores que no reconocen calc()*/
+    width: calc(100% - 1em);
+}
+
+#formbox {
+    width: 130px;             /* salvaguarda para navegadores que no reconocen calc() */
+    width: calc(100% / 6);
+    border: 1px solid black;
+    padding: 4px;
+}
+
+
+span.textThreePlus {
+    font-size: calc(1em + 3px);
+    font-size: -moz-calc(1em + 3px);
+    font-size: -webkit-calc(1em + 3px);
+}
+
+#footer {
+    height: calc((10% - 4px) /  2 + 3px);
+}
+.contenedor{
+    width: calc(300px / 950px * 100%)
+}
+
+
+@function liquido($valor, $valorpadre){
+    @return $valor / $valorpadre * 100%;
+}
+
+.div {
+    width: liquido(300px, 950px);
+        
+}
+
+
+
+
+@function rem($size) {
+    @return $size / 16px * 1rem;
+}
+
+.div {
+    font-size: rem(12px);
+}

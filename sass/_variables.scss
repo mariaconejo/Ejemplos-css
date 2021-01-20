@@ -1,0 +1,46 @@
+
+
+/* Ejemplo con variables */
+
+:root {
+    --main-bg-color: brown;
+}
+
+
+.uno {
+    color: white;
+    background-color: var(--main-bg-color);
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.dos {
+    color: white;
+    background-color: black;
+    margin: 10px;
+    width: 150px;
+    height: 70px;
+    display: inline-block;
+}
+.tres {
+    color: white;
+    background-color: var(--main-bg-color);
+    margin: 10px;
+    width: 75px;
+}
+
+
+/*SASS*/
+$color-principal:#122033;
+$color-alt:#96A8C0;
+
+a {
+    color: $color-principal;
+}
+
+a:hover {
+    color: $color-alt;
+}
+
