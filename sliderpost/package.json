@@ -1,0 +1,18 @@
+{
+  "name": "sliderpost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/styles.css --output dist/css/styles.css",
+    "watch": "postcss src/css/styles.css --output dist/css/estilos.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  }
+}

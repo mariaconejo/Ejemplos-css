@@ -31,6 +31,14 @@
     width: 75px;
 }
 
+:root {
+    --base-color: #937b19;
+}
+
+.box {
+    color: color-mod(var(--base-color) tint(59%));
+}
+
 
 /*SASS*/
 $color-principal:#122033;

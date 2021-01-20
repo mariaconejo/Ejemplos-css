@@ -29,3 +29,11 @@ p{
 .container {
     @include borde-redondo(4px);
 }
+
+.foo{
+    color: red;
+}
+
+.bar{
+    @extend .foo;
+}

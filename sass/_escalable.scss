@@ -1,0 +1,14 @@
+/*Arquitectura escalable y modular para CSS*/
+
+.pod {
+    width: 100%;
+}
+.pod-short input[type=text] {
+    width: 50%;
+}
+.pod-callout {
+    width: 200px;
+}
+.pod-callout input[type=text] {
+    width: 180px;
+}

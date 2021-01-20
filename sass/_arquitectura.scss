@@ -1,0 +1,80 @@
+/* Regla: !important: */
+p {
+
+    color: green !important;
+
+}
+
+/* REGLA 3 Mayor especificidad: */
+
+  /* Especificidad de 3, mayor prioridad */
+
+.product-detail .product-properties .product-property {}
+
+
+  /* Especificidad de 2 */
+
+.product-properties .product-property {}
+
+
+  /* Especificidad de 1 */
+
+.product-property {}
+
+/*REGLA 4 Última línea*/
+p {
+    color: red;
+
+}
+
+a {
+
+    color: white;
+
+}
+
+p {
+
+    /* Este valor sobreescribe el que se definió en la primera regla. */
+    color: green;
+
+}
+
+/* EJEMPLO */
+
+$primary-color: #222222;
+
+$text-color: #ff22ff;
+
+
+.product {
+
+  /* reglas de producto */
+
+color: $primary-color;
+
+
+&-properties {
+
+    /* reglas de las propiedades de producto */
+
+    li {
+
+      /* reglas de cada elemento de la lista de propiedades de producto */
+
+    &:hover,
+
+    &.active {
+
+        background-color: $primary-color;
+
+
+        color: $text-color;
+
+    }
+
+    }
+
+}
+
+}
